@@ -67,24 +67,19 @@ p {
     padding-right: 16px;
 
  }
+ header {
+     box-shadow:
+         0 1px 6px rgba(46, 47, 66, 0.08),
+         0 1px 1px rgba(46, 47, 66, 0.16),
+         0 2px 1px rgba(46, 47, 66, 0.08);
+        }
 
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
-}
-
-@media screen and (min-width: 1158px) {
-    .container {
-        max-width: 1158px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
  /* ==================== /COMMON STYLES ==================== */
 
 /* =================  HEADER-MOBILE STYLES ================= */
-
+.page-head {
+    border-bottom: 1px solid #E7E9FC;
+    padding: 24px 0;}
 
 .list-nav {
     display: none;
@@ -122,6 +117,7 @@ p {
 }
 
 
+/* ==================== STYLE MOBILE MENU ==================== */
 @media screen and (max-width: 767px) {
     .mobile-open-btn {
             border: none;
@@ -156,7 +152,7 @@ p {
             justify-content: center;
             cursor: pointer;
             top: 24px;
-            right: 40px;
+            right: 24px;
             padding: 0;
             border-radius: 50%;
             line-height: 0;
@@ -221,10 +217,12 @@ p {
         }
     
         .mobile-name-icon {
+            width: 100%;
             display: flex;
-            justify-content: start;
+            justify-content: flex-start;
             align-items: center;
             gap: 40px;
+            flex-wrap: wrap;
     
         }
     
@@ -248,15 +246,28 @@ p {
 
 /* =================  /HEADER-MOBILE STYLES ================= */
 
-@media screen and (min-width: 768px) {
 /* =================  HEADER-TABLET STYLES ================= */
-
-
+@media screen and (min-width: 768px){
+.container {
+        max-width: 768px;
+    }
+.page-head {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
     .list-nav {
         display: flex;
+        gap: 40px;
+                
     }
+    .container .head-nav {
+    display: flex;
+    align-items: center;
+}
     .list-contacts {
         display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
     .mobile-menu {
         display: none;
@@ -264,5 +275,426 @@ p {
     .mobile-open-btn {
         display: none;
     }
+
+.page-head .logo {
+    margin-right: 120px;
+}
+.list-nav .link {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    padding: 16px 0;
+}
+.list-nav .link:hover,
+.list-nav .link:focus {
+    color: #404bbf;
+    padding-bottom: 20px;
+}
+.link:hover::after {
+    position: absolute;
+    display: block;
+    bottom: -18px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #404BBF;
+    border-radius: 2px;
+    content: '';
+    color: #404bbf;
+    
+}
+.page-contacts {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+}
+
+.page-contacts:hover,
+.page-contacts:focus {
+    color: #404bbf;}
 }
 /* =================  /HEADER-TABLET STYLES ================= */
+
+/* ================= HEADER-DESKTOP STYLES ================= */
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+.page-head .logo {
+    margin-right: 76px;
+}
+.list-contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+.link:hover::after {
+    bottom: -1px;
+}
+}
+/* ================= /HEADER-DESKTOP STYLES ================= */
+
+/* ================= SECTION ONE-MOBILE STYLES =============== */
+.section-one {
+    max-width: 320px;
+    background-color: #2e2f42;
+    padding: 72px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #ffffff;
+    max-width: 217px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+    
+}
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+    .section-one {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/retina/Dark-bg-mobile@2x.jpg);
+    }
+}
+.but {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #4D5AE5;
+    border-radius: 4px;
+    padding: 16px 32px;
+    border: none;
+    min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.but:hover,
+.but:focus {
+    background-color: #404BBF;}
+
+/* ================= /SECTION ONE-MOBILE STYLES =============== */
+
+/* ================= SECTION ONE-TABLET STYLES =============== */
+@media screen and (min-width: 768px) {
+    .section-one {
+        max-width: 768px;
+        padding: 112px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-tablet.jpg);
+        
+    }
+    .title {
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
+        margin-bottom: 36px;
+
+    }
+
+        @media screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx),
+        screen and (min-device-pixel-ratio: 2) {
+            .section-one {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/retina/Dark-bg-tablet@2x.jpg);
+            }
+        }
+}
+
+/* ================= /SECTION ONE-TABLET STYLES =============== */
+
+/* ================= SECTION ONE-DESKTOP STYLES =============== */
+@media screen and (min-width: 1158px) {
+    .section-one {
+            max-width: 1440px;
+            padding: 188px 0;
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg_people_office.jpg);
+    
+        }
+    
+        .title {
+            margin-bottom: 48px;
+    
+        }
+    
+        @media screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx),
+        screen and (min-device-pixel-ratio: 2) {
+            .section-one {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/retina/bg_people_office@2x.jpg);
+            }
+        }
+
+}
+/* ================= /SECTION ONE-DESKTOP STYLES =============== */
+
+/* ================= BACKDROP-MOBILE STYLES =============== */
+@media screen and (max-width: 767px) {
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999999;
+    width: 767px;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* ================= /BACKDROP-MOBILE STYLES =============== */
+
+/* ================= MODAL-WINDOW-MOBILE STYLES =============== */
+
+
+
+.text-modal {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 16px;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 288px;
+    min-height: 623px;
+    background-color: #fcfcfc;
+    border-radius: 4px;
+    padding: 72px 16px 24px 16px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.close-modal .icon-close-modal {
+    fill: rgba(46, 47, 66, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-modal:hover .icon-close-modal,
+.close-modal:focus .icon-close-modal {
+    fill: #ffffff;
+}
+
+.close-modal {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    top: 24px;
+    right: 24px;
+    padding: 0;
+    border-radius: 50%;
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #e7e9fc;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    background-color: #404bbf;
+    border: none;
+    outline-color: transparent;
+}
+
+
+/* ================= /MODAL-WINDOW-MOBILE STYLES =============== */
+
+/* ================= ELEMENTS FORM-MOBILE STYLES =============== */
+.user-label-form {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: rgba(142, 143, 153, 1);
+    margin-bottom: 4px;
+}
+
+.rewiew-form-field {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    padding-left: 34px;
+    outline-color: transparent;
+    outline-offset: 4px;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.rewiew-form-field:focus {
+    border-color: #4d5ae5;
+}
+
+.rewiew-form-field:focus+.rewiew-form-icon {
+    fill: #4D5AE5;
+}
+.rewiew-form-wrapper {
+    margin-bottom: 8px;
+}
+
+.rewiew-form-wrapper-area {
+    margin-bottom: 16px;
+}
+.rewiew-form-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    line-height: 0;
+}
+
+.rewiew-form-input-wrapper {
+    position: relative;
+}
+.rewiew-form-field-area {
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    outline-color: transparent;
+    outline-offset: 4px;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-align: left;
+    border: 1px solid #2E2F4266;
+    background-color: transparent;
+    color: #8E8F99;
+}
+.rewiew-form-field-area:focus {
+    border-color: #4d5ae5;
+}
+
+.rewiew-form-field-area::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #2E2F4266;
+}
+
+.rewiew-form-checkbox-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #8E8F99;
+
+}
+.privecy-policy-link {
+    color: #4D5AE5;
+    text-decoration: underline;
+}
+.rewiew-form-button {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #4D5AE5;
+    color: #ffffff;
+    box-shadow: 0px 4px 4px 0px #00000026;
+}
+
+.rewiew-form-button:hover,
+.rewiew-form-button:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.rewiew-form-own-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #2e2f4266;
+    border-radius: 2px;
+    cursor: pointer;
+    fill: transparent;
+    margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.rewiew-form-checkbox-wrapper {
+    margin-bottom: 24px;
+}
+
+.rewiew-form-checkbox:checked+.rewiew-form-checkbox-label .rewiew-form-own-checkbox {
+    background-color: #404bbf;
+    border-color: #404bbf;
+    fill: #f4f4fd;
+    border: none;
+}
+
+}
+/* ================= /ELEMENTS FORM-MOBILE STYLES =============== */
+
+
+
+
+
