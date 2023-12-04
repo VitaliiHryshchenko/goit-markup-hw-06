@@ -95,10 +95,10 @@ header {
 } 
 
 .list-nav .link:hover,
-.list-nav .link:focus {
+.list-nav .link:focus{
       color: #404bbf;
      }
-.first::after {
+.link::after {
       position: absolute;
       display: block;
       bottom:-1px;
