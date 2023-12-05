@@ -104,6 +104,60 @@ address {
 
 
 /*========== /HEADER MOBILE STYLES =========*/
+
+/*========== SECTION ONE MOBILE ==========*/
+.section-one {
+    max-width: 320px;
+    background-color: #2e2f42;
+    padding: 72px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    font-size: 36px;
+    line-height: 1.12;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    max-width: 217px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 72px;
+    text-transform: capitalize;
+}
+.but {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    background-color: #4D5AE5;
+    border-radius: 4px;
+    padding: 16px 32px;
+    border: none;
+    min-width: 169px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.but:hover,
+.but:focus {
+    background-color: #404BBF;
+}
+@media screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx),
+       screen and (min-device-pixel-ratio: 2) {
+    
+        .section-one {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/retina/Dark-bg-mobile@2x.jpg);
+        }
+    
+}
+/*========== /SECTION ONE MOBILE ==========*/
+
+/*========== STYLE MENU MOBILE ==========*/
 @media screen and (max-width: 767px) {
 .mobile-open-btn {
     border: none;
@@ -233,6 +287,10 @@ address {
     line-height: 0;
 }
 }
+/*========== /STYLE MENU MOBILE ==========*/
+
+
+/*========== STYLE TABLET ===========*/
 
  @media screen and (min-width: 768px) {
 .container {
@@ -246,6 +304,7 @@ address {
    
         border-bottom: 1px solid #E7E9FC;
 }
+
 /*========== HEADER TABLET STYLES ==========*/
 .logo {
     margin-right: 120px;
@@ -318,10 +377,36 @@ address {
 .mobile-menu {
     display: none;
 }
- }
+ 
  
 /*========== /HEADER TABLET STYLES =========*/
 
+/*========== SECTION ONE TABLET ==========*/
+.section-one {
+    max-width: 768px;
+    padding: 112px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Dark-bg-tablet.jpg);
+    
+}
+.title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
+    text-transform: none;
+}
+@media screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx),
+       screen and (min-device-pixel-ratio: 2) {
+
+    .section-one {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/retina/Dark-bg-tablet@2x.jpg);
+    }
+
+}   
+
+/*========== /SECTION ONE TABLET ==========*/
+}
 
 
  @media screen and (min-width: 1158px) {
@@ -347,4 +432,26 @@ address {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+/*========== SECTION ONE DESKTOP ==========*/
+
+.section-one {
+    max-width: 1440px;
+    padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/bg_people_office.jpg);
+
+}
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+
+    .section-one {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/retina/bg_people_office@2x.jpg);
+    }
+}
+
+
+.title {
+    margin-bottom: 48px;
+}
+/*========== SECTION ONE DESKTOP ==========*/
 }
