@@ -157,6 +157,35 @@ address {
 }
 /*========== /SECTION ONE MOBILE ==========*/
 
+/*========== SECTION TWO MOBILE ==========*/
+.menu-icon {
+    display: none;
+}
+.section-two-container {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+.menu-two .category {
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    
+}
+.text-two {
+    font-weight: 500;
+}
+.list-two{
+    padding-bottom: 72px;
+}
+.list-two:last-child {
+    padding-bottom: 0;
+}
+
+/*========== /SECTION TWO MOBILE ==========*/
+
+
+
 /*========== STYLE MENU MOBILE ==========*/
 @media screen and (max-width: 767px) {
 .mobile-open-btn {
@@ -406,6 +435,24 @@ address {
 }   
 
 /*========== /SECTION ONE TABLET ==========*/
+.menu-two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.menu-two .list-two {
+    width: calc((100% - 24px) / 2);
+}
+.list-two:nth-child(n+3) {
+    padding-bottom: 0;
+}
+
+/*========== SECTION TWO TABLET ==========*/
+
+
+
+/*========== /SECTION TWO TABLET ==========*/
+
 }
 
 
@@ -453,5 +500,40 @@ screen and (min-device-pixel-ratio: 2) {
 .title {
     margin-bottom: 48px;
 }
-/*========== SECTION ONE DESKTOP ==========*/
+/*========== /SECTION ONE DESKTOP ==========*/
+
+
+/*========== SECTION TWO DESKTOP ==========*/
+.menu-icon {
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+}
+.menu-two .category {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #2E2F42;
+
+}
+.list-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    width: 264px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border: 1px solid #8E8F99;
+    gap: 24px;
+}
+.menu-two .list-two {
+    width: calc((100% - 72px) / 4);
+    padding-bottom: 0;
+}
+.text-two {
+    font-weight: 400;
+}
+/*========== /SECTION TWO DESKTOP ==========*/
 }
