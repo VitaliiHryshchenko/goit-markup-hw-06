@@ -236,7 +236,7 @@ header {
 
   .section-three {
       background-color: #F4F4FD;
-      padding: 120px 0
+      padding: 120px 0;
 }
 
 .image-three {
@@ -262,7 +262,7 @@ header {
 }
   .name-team {
       text-align: center;
-      padding: 32px 0 32px 0;
+      padding: 32px 0;
 }
 
   .section-three .text-three {
