@@ -451,6 +451,231 @@ address {
 /*========== /FOOTER MOBILE ==========*/
 
 
+/*========== BACKDROP ==========*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+/*========== /BACKDROP ==========*/
+
+/*========== MODAL WINDOW MOBILE ==========*/
+.text-modal {
+    font-weight: 500;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 16px;
+
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 288px;
+    min-height: 623px;
+    background-color: #fcfcfc;
+    border-radius: 4px;
+    padding: 72px 16px 24px 16px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.close-modal .icon-close-modal {
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-modal:hover .icon-close-modal,
+.close-modal:focus .icon-close-modal {
+    fill: #ffffff;
+}
+.close-modal {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 24px;
+    right: 24px;
+    padding: 0;
+    border-radius: 50%;
+    line-height: 0;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(231, 233, 252, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-modal:hover,
+.close-modal:focus {
+    background-color: #404bbf;
+    border: none;
+    outline-color: transparent;
+}
+/*========== /MODAL WINDOW MOBILE ==========*/
+
+/*========== ELEMENTS FORM MOBILE ==========*/
+.user-label-form {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #8e8f99;
+    margin-bottom: 4px;
+}
+.rewiew-form-field {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #2e2f4266;
+    border-radius: 4px;
+    padding-left: 34px;
+    outline-color: transparent;
+    outline-offset: 4px;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.rewiew-form-field:focus {
+    border-color: #4d5ae5;
+}
+.rewiew-form-field:focus+.rewiew-form-icon {
+    fill: #4D5AE5;
+}
+.rewiew-form-wrapper {
+    margin-bottom: 8px;
+}
+.rewiew-form-wrapper-area {
+    margin-bottom: 16px;
+}
+.rewiew-form-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    line-height: 0;
+}
+.rewiew-form-input-wrapper {
+    position: relative;
+}
+.rewiew-form-field-area {
+    width: 100%;
+    height: 120px;
+    border-radius: 4px;
+    outline-color: transparent;
+    outline-offset: 4px;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-align: left;
+    border: 1px solid #2E2F4266;
+    background-color: transparent;
+    color: rgba(46, 47, 66, 0.4);
+}
+.rewiew-form-field-area:focus {
+    border-color: #4d5ae5;
+}
+.rewiew-form-field-area::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #2E2F4266;
+}
+.rewiew-form-checkbox-label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #8E8F99;
+
+}
+
+.privecy-policy-link {
+    color: #4D5AE5;
+    text-decoration: underline;
+}
+
+.rewiew-form-button {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #4D5AE5;
+    color: #ffffff;
+    box-shadow: 0px 4px 4px 0px #00000026;
+}
+
+.rewiew-form-button:hover,
+.rewiew-form-button:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.rewiew-form-own-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #2e2f4266;
+    border-radius: 2px;
+    cursor: pointer;
+    fill: transparent;
+    margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.rewiew-form-checkbox-wrapper {
+    margin-bottom: 24px;
+}
+
+.rewiew-form-checkbox:checked+.rewiew-form-checkbox-label .rewiew-form-own-checkbox {
+    background-color: #404bbf;
+    border-color: #404bbf;
+    fill: #f4f4fd;
+    border: none;
+}
+/*========== /ELEMENTS FORM MOBILE ==========*/
+
+
 /*========== STYLE MENU MOBILE ==========*/
 @media screen and (max-width: 767px) {
 .mobile-open-btn {
@@ -624,13 +849,11 @@ address {
     padding-bottom: 24px;
     padding-top: 24px;
     color: #2E2F42;
-    
 }
 
 .list-contacts {
     display: flex;
     flex-direction: column;
-
 }
 .link:hover,
 .link:focus {
@@ -782,6 +1005,15 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
  
 /*========== /FOOTER TABLET ==========*/
 
+
+/*========== MODAL WINDOOW TABLET ==========*/
+.modal {
+    width: 408px;
+    min-height: 584px;
+    padding: 72px 25px 24px 23px;
+}
+/*========== /MODAL WINDOOW TABLET ==========*/
+
 }
 
 /*========== HEADER DESKTOP ==========*/
@@ -880,7 +1112,6 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 /*========== /SECTION THREE DESKTOP ==========*/
 
 
-
 /*========== SECTION FOUR DESKTOP ==========*/
 .section-four {
     padding-top: 120px;
@@ -916,4 +1147,10 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     margin-right: 80px;
 }
 /*========== /FOOTER DESKTOP ==========*/
+
+/*========== ELEMENTS FORM DESKTOP ==========*/
+.rewiew-form-field {
+    padding-left: 38px;
+}
+/*========== /ELEMENTS FORM DESKTOP ==========*/
 }
