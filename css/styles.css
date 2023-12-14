@@ -159,7 +159,7 @@ a {
 .menu-icon {
     display: none;
 }
-.section-two-container {
+.section-two {
     padding-top: 96px;
     padding-bottom: 96px;
 }
@@ -174,10 +174,10 @@ a {
     font-weight: 500;
 }
 .list-two{
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 .list-two:last-child {
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 /*========== /SECTION TWO MOBILE ==========*/
@@ -861,12 +861,15 @@ a {
     display: flex;
     flex-direction: column;
 }
+.first {
+    color: #404BBF;
+}
 .link:hover,
 .link:focus {
     color: #404BBF;
 }
-.list-nav .link:hover::after,
-.list-nav .link:focus::after {
+.list-nav .first::after,
+.list-nav .first::after {
     position: absolute;
     display: block;
     bottom: -1px;
@@ -933,9 +936,12 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    row-gap: 72px;
 }
 .menu-two .list-two {
     width: calc((100% - 24px) / 2);
+    margin-bottom: 0;
+   
 }
 .list-two:nth-child(n+3) {
     padding-bottom: 0;
@@ -980,7 +986,7 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     padding: 0;
 }
 .closed-part .container {
-    padding: 0 0 0 108px;
+    width: 584px;
 }
 .text-part {
     width: 264px;
@@ -1101,6 +1107,10 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 .text-two {
     font-weight: 400;
 }
+.section-two {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
 /*========== /SECTION TWO DESKTOP ==========*/
 
 
@@ -1129,6 +1139,7 @@ background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
 
 .closed-part .container {
     flex-direction: row;
+    justify-content: center;
 }
 .rewiew-form-footer {
     display: flex;
